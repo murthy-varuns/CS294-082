@@ -8,4 +8,4 @@ Hello! I'm glad you're here. Here is an overview of the project from the origina
 
 Clone the repository and navigate to the directory with requirements.txt. Start by creating a new virtual environment (I used Anaconda, not virtualenv) and downloading the dependencies by
 
-'pip install -r requirements.txt'
+`pip install -r requirements.txt`
