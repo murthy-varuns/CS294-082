@@ -12,5 +12,5 @@ Clone the repository create a new virtual environment (I used Anaconda, not virt
 
 Start by importing everything from the deepcompressor package. If this doesn't cause any errors you're all good to go!
 
-`from deepcompressor import *'
+`from deepcompressor import *`
  
