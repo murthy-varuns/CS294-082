@@ -11,10 +11,13 @@ Clone the repository and create a new virtual environment on Anaconda or virtual
 
 `pip install -r requirements.txt`
 
+If deepcompressor isn't installed yet try `pip install -i https://test.pypi.org/simple/ deepcompressor`.
+
 ### Deep Compression Pipeline
 
 #### Step 1
-Run `import deepcompressor` and create a new CapacityEstimator `ce = CapacityEstimator()`.
+Run `import deepcompressor` and create a new CapacityEstimator `ce = CapacityEstimator()`. Note: If these two lines don't work even after installing from *test.pypi.org* please contact me ASAP. Try `pip show deepcompressor` to see the root directory. There should be 1 __init__.py file and 4 other .py files.
+
 #### Step 2
 Create the model.
 ```
