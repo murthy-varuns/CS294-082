@@ -1,0 +1,11 @@
+https://neurohive.io/en/popular-networks/vgg16/
+https://gist.github.com/baraldilorenzo/07d7802847aaad0a35d3
+https://arxiv.org/abs/1409.1556
+https://www.researchgate.net/figure/A-schematic-of-the-VGG-16-Deep-Convolutional-Neural-Network-DCNN-architecture-trained_fig2_319952138
+https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/
+https://blog.exxactcorp.com/deep-compression-optimization-techniques/
+https://github.com/songhan/Deep-Compression-AlexNet
+https://www.youtube.com/watch?v=vouEMwDNopQ
+https://openreview.net/forum?id=ByED-X-0W
+https://towardsdatascience.com/nvidia-paper-summary-stochastic-layer-wise-precision-in-deep-neural-networks-882c43de4526
+https://medium.com/zylapp/deep-learning-model-compression-for-image-analysis-methods-and-architectures-398f82b0c06f
