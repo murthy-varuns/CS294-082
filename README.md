@@ -13,11 +13,11 @@ Clone the repository and create a new virtual environment on Anaconda or virtual
 
 Run `from deepcompressor import checker` and `checker.ensure_background()` to ensure that there are no problems with any dependencies. 
 
-## Deep Compression 
+### Deep Compression 
 
-### Step 1
+#### Step 1
 Run `import deepcompressor` and create a new CapacityEstimator `ce = CapacityEstimator()`.
-### Step 2
+#### Step 2
 Create the model.
 ```
 vgg16 = model('vgg16', True)
