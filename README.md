@@ -72,7 +72,7 @@ fig = sns.lineplot(x='cap', y='acc', data=df);
 fig.set(ylabel='Generalization', xlabel='Memory Equivalent Capacity');
 fig.get_figure().savefig('GC_curve.jpg')
 ```
-Look at [FinalScript.html](FinalScript.html) to see what the entire process looks like with 2 epochs per training cycle.
+Look at [FinalScript.html](FinalScript.pdf) to see what the entire process looks like with 2 epochs per training cycle.
 ### Versioning
 
 We use [PyPI](https://pypi.org/project/deepcompressor/) for versioning.
