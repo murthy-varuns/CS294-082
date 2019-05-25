@@ -25,6 +25,51 @@ vgg16.set_capacity_estimator(ce)
 vgg16.parallelize()
 vgg16.prepare_dataset()
 ```
+### Step 3
+Set the training parameters.
+```
+num_epochs = 6
+max_epochs_stop = 3
+num_classes = 10
+batch_size = 10
+learning_rate = 0.001
+print_every = 1
+```
+### Step 4
+Create a DeepCompressor with a Model and its Trainer.
+```
+training_params = [num_epochs, max_epochs_stop, num_classes, batch_size, learning_rate, print_every]
+deep_compressor = deep_compressor(vgg16, trainer(vgg16, training_params))
+```
+### Step 5
+Repeatedly train, test and squeeze the network.
+```
+deep_compressor.train(dropout=100)
+deep_compressor.test() # ce.estimate(25088, 4096, 4096, 256, 10)
+deep_compressor.squeeze(100)
+deep_compressor.train(dropout=100)
+deep_compressor.test() # ce.estimate(25088, 4096-100, 4096, 256, 10)
+deep_compressor.squeeze(100)
+deep_compressor.train(dropout=100)
+deep_compressor.test() # ce.estimate(25088, 4096-100, 4096, 256, 10)
+deep_compressor.squeeze(100)
+deep_compressor.train(dropout=100)
+deep_compressor.test() # ce.estimate(25088, 4096-100, 4096, 256, 10)
+deep_compressor.squeeze(100)
+deep_compressor.train(dropout=100)
+deep_compressor.test() # ce.estimate(25088, 4096-100, 4096, 256, 10)
+deep_compressor.squeeze(100)
+deep_compressor.train(dropout=100)
+deep_compressor.test() # ce.estimate(25088, 4096-100, 4096, 256, 10)
+```
+### Step 6
+Plot Generalization vs Capacity and save the figure if you want to.
+```
+df = pd.DataFrame(data=deep_compressor.model.history)
+sns.set(style="darkgrid")
+fig = sns.lineplot(x='cap', y='acc', data=df);
+fig.set(ylabel='Generalization', xlabel='Memory Equivalent Capacity');
+fig.get_figure().savefig('GC_curve.jpg')
 
 ## Versioning
 
