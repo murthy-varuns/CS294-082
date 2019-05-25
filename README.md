@@ -69,14 +69,14 @@ fig = sns.lineplot(x='cap', y='acc', data=df);
 fig.set(ylabel='Generalization', xlabel='Memory Equivalent Capacity');
 fig.get_figure().savefig('GC_curve.jpg')
 ```
-
+Look at FinalScript.html to see what the entire process looks like with 2 epochs per training cycle.
 ### Versioning
 
 We use [PyPI](https://pypi.org/project/deepcompressor/) for versioning.
 
 ### Authors
 
-* **Varun Murthy** - *murthy@berkeley.edu* 
+* **Varun Murthy** (*murthy@berkeley.edu*) 
 
 ### License
 
@@ -84,4 +84,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ### Acknowledgments
 
-* Hat tip to Dr. Gerald Friedland *fractor@eecs.berkeley.edu* of the Department of EECS, University of California at Berkeley.
+* Hat tip to Dr. Gerald Friedland (*fractor@eecs.berkeley.edu*) of the Department of EECS, University of California at Berkeley.
