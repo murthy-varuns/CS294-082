@@ -51,16 +51,16 @@ deep_compressor.train(dropout=100)
 deep_compressor.test() # ce.estimate(25088, 4096-100, 4096, 256, 10)
 deep_compressor.squeeze(100)
 deep_compressor.train(dropout=100)
-deep_compressor.test() # ce.estimate(25088, 4096-100, 4096, 256, 10)
+deep_compressor.test() # ce.estimate(25088, 4096-200, 4096, 256, 10)
 deep_compressor.squeeze(100)
 deep_compressor.train(dropout=100)
-deep_compressor.test() # ce.estimate(25088, 4096-100, 4096, 256, 10)
+deep_compressor.test() # ce.estimate(25088, 4096-300, 4096, 256, 10)
 deep_compressor.squeeze(100)
 deep_compressor.train(dropout=100)
-deep_compressor.test() # ce.estimate(25088, 4096-100, 4096, 256, 10)
+deep_compressor.test() # ce.estimate(25088, 4096-400, 4096, 256, 10)
 deep_compressor.squeeze(100)
 deep_compressor.train(dropout=100)
-deep_compressor.test() # ce.estimate(25088, 4096-100, 4096, 256, 10)
+deep_compressor.test() # ce.estimate(25088, 4096-500, 4096, 256, 10)
 ```
 ### Step 6
 Plot Generalization vs Capacity and save the figure if you want to.
@@ -70,6 +70,7 @@ sns.set(style="darkgrid")
 fig = sns.lineplot(x='cap', y='acc', data=df);
 fig.set(ylabel='Generalization', xlabel='Memory Equivalent Capacity');
 fig.get_figure().savefig('GC_curve.jpg')
+```
 
 ## Versioning
 
