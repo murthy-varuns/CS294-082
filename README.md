@@ -1,4 +1,4 @@
-# CS294-082
+# CS 294-082
 ***Public Repository for CS 294-082 - Experimental Design for Machine Learning on Multimedia Data (Graduate) - Coursework (Spring '19)***
 
 Hello! I'm glad you're here. Here is an overview of the project from the original report:
@@ -13,7 +13,7 @@ Clone the repository and create a new virtual environment on Anaconda or virtual
 
 Run `from deepcompressor import checker` and `checker.ensure_background()` to ensure that there are no problems with any dependencies. 
 
-### Deep Compression 
+### Deep Compression Pipeline
 
 #### Step 1
 Run `import deepcompressor` and create a new CapacityEstimator `ce = CapacityEstimator()`.
@@ -25,7 +25,7 @@ vgg16.set_capacity_estimator(ce)
 vgg16.parallelize()
 vgg16.prepare_dataset()
 ```
-### Step 3
+#### Step 3
 Set the training parameters.
 ```
 num_epochs = 6
@@ -35,13 +35,13 @@ batch_size = 10
 learning_rate = 0.001
 print_every = 1
 ```
-### Step 4
+#### Step 4
 Create a DeepCompressor with a Model and its Trainer.
 ```
 training_params = [num_epochs, max_epochs_stop, num_classes, batch_size, learning_rate, print_every]
 deep_compressor = deep_compressor(vgg16, trainer(vgg16, training_params))
 ```
-### Step 5
+#### Step 5
 Repeatedly train, test and squeeze the network.
 ```
 deep_compressor.train(dropout=100)
@@ -62,7 +62,7 @@ deep_compressor.squeeze(100)
 deep_compressor.train(dropout=100)
 deep_compressor.test() # ce.estimate(25088, 4096-500, 4096, 256, 10)
 ```
-### Step 6
+#### Step 6
 Plot Generalization vs Capacity and save the figure if you want to.
 ```
 df = pd.DataFrame(data=deep_compressor.model.history)
@@ -72,18 +72,18 @@ fig.set(ylabel='Generalization', xlabel='Memory Equivalent Capacity');
 fig.get_figure().savefig('GC_curve.jpg')
 ```
 
-## Versioning
+### Versioning
 
 We use [PyPI](https://pypi.org/project/deepcompressor/) for versioning.
 
-## Authors
+### Authors
 
 * **Varun Murthy** - *murthy@berkeley.edu* 
 
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-## Acknowledgments
+### Acknowledgments
 
 * Hat tip to Dr. Gerald Friedland *fractor@eecs.berkeley.edu* of the Department of EECS, University of California at Berkeley.
