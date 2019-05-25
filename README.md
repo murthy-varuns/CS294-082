@@ -11,8 +11,6 @@ Clone the repository and create a new virtual environment on Anaconda or virtual
 
 `pip install -r requirements.txt`
 
-Run `from deepcompressor import checker` and `checker.ensure_background()` to ensure that there are no problems with any dependencies. 
-
 ### Deep Compression Pipeline
 
 #### Step 1
