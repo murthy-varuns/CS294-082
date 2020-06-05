@@ -57,7 +57,7 @@ defusedxml==0.5.0
 dill==0.2.8.2
 distributed==1.26.0
 dj-database-url==0.5.0
-Django==2.1.4
+Django==2.2.13
 django-heroku==0.3.1
 docutils==0.14
 entrypoints==0.3
