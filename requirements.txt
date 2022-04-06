@@ -132,7 +132,7 @@ nbformat==4.4.0
 networkx==2.2
 nltk==3.4
 nose==1.3.7
-notebook==5.7.4
+notebook==6.4.10
 numba==0.39.0+0.g4e4956669.dirty
 numexpr==2.6.8
 numpy==1.16.3
