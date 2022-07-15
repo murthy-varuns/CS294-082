@@ -55,7 +55,7 @@ decorator==4.3.2
 deepcompressor==2.0
 defusedxml==0.5.0
 dill==0.2.8.2
-distributed==1.26.0
+distributed==2021.10.0
 dj-database-url==0.5.0
 Django==2.1.4
 django-heroku==0.3.1
